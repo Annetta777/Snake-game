@@ -8,17 +8,17 @@ let heightInBlocks = height / blockSize
 let score = 0 
 let drawBorder = function () {
   ctx.fillStyle = "Gray"
-  ctx.fillRect (0, 0, width, blockSize)
-  ctx.fillRect (0, height - blockSize, width, blockSize)
-  ctx.fillRect (0, 0, blockSize, height)
-  ctx.fillRect (width - blockSize, 0, blockSize, height)
+  ctx.fillRect(0, 0, width, blockSize)
+  ctx.fillRect(0, height - blockSize, width, blockSize)
+  ctx.fillRect(0, 0, blockSize, height)
+  ctx.fillRect(width - blockSize, 0, blockSize, height)
 }
 let drawScore = function () {
     ctx.font = "20px Courier"
     ctx.fillStyle = "Black"
     ctx.textAlign = "left"
     ctx.textBaseline = "top"
-    ctx.fillText = ("Счет: " + score, blockSize, blockSize)
+    ctx.fillText("Счет: " + score, blockSize, blockSize)
 }
 let  gameOver = function () {
     clearInterval(intervalId)
@@ -26,7 +26,7 @@ let  gameOver = function () {
     ctx.fillStyle = "Black"
     ctx.textAlign = "center"
     ctx.textBaseline = "middle"
-    ctx.fillText = ("Конец игры", width / 2, height / 2)
+    ctx.fillText("Конец игры", width / 2, height / 2)
 }
 let circle = function (x, y, radius, fillCircle) {
   ctx.beginPath()
