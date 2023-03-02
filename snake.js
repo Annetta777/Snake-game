@@ -67,6 +67,7 @@ let  Snake = function () {
 }
 Snake.prototype.draw = function () {
   for (i = 0; i < this.segments.length; i++) {
+  this.segments[0].drawSquare("Red")
   this.segments[i].drawSquare("Blue")
   }
 }
@@ -131,6 +132,8 @@ Apple.prototype.move = function () {
   let randomCol = Math.floor(Math.random() * (widthInBlocks - 2)) + 1
   let randomRow = Math.floor(Math.random() * (heightInBlocks - 2)) + 1
   this.position = new Block(randomCol, randomRow)
+  if (new Block === Snake.position) return
+  else this.position = new Block(randomCol, randomRow)
 }
 let snake = new Snake ()
 let apple = new Apple ()
@@ -141,7 +144,7 @@ let intervalId = setInterval(function () {
   snake.draw ()
   apple.draw ()
   drawBorder ()
-  }, 100)
+  }, 50)
 let directions = {
   37: "left",
   38: "up",
