@@ -144,7 +144,7 @@ let intervalId = setInterval(function () {
   snake.draw ()
   apple.draw ()
   drawBorder ()
-  }, 50)
+  }, 150)
 let directions = {
   37: "left",
   38: "up",
